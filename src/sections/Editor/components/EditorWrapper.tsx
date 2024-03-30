@@ -12,10 +12,12 @@ const EditorWrapper = () => {
   ];
   const editorRef = useRef(null);
   const [fileName, setFileName] = useState("Example File 1");
-
+  //@ts-ignore
   const file = files[fileName];
 
   useEffect(() => {
+    //@ts-ignore
+
     editorRef.current?.focus();
   }, [file?.name]);
 
